@@ -32,6 +32,29 @@
 					<div class="col-md-6 col-md-offset-3">
 						<h:commandButton value="Logar" action="#{user.getCredencial}"/>
 					</div>
+								
+					
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<h:panelGrid columns="1" cellpadding="5">
+						    <h:outputLabel value="Cadastrar: "/>
+						    <p:commandButton value="clique aqui" type="button" onclick="PF('dlg3').show();" /> 
+						</h:panelGrid>
+	
+						<p:dialog header="Effects" widgetVar="dlg3" showEffect="explode" hideEffect="bounce" height="300">
+						    <h:outputText value="Username:" /><br/>
+						    <h:inputText value="#{user.username}"/>
+						    <br/><br/>
+						    <h:outputText value="Password:" /><br/>
+						    <h:inputText value="#{user.password}"/>
+						    <br/><br/>
+						    <h:outputText value="Confirm your Password:" /><br/>
+						    <h:inputText value="#{user.password}"/>
+						    <br/><br/>
+						    <h:commandButton value="Cadastrar" action="#{user.getCredencial}"/>
+						</p:dialog>
+					</div>
 				</div>			
 			</div>
 		</h:form>
