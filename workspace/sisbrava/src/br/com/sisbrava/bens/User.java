@@ -25,8 +25,8 @@ public class User {
 	}
 	
 	public String getCredencial() {
-		if(this.password.equals("senha")) {
-			return "index";
+		if(this.password.equals("senha123")) {
+			return "paginaInicial";
 		}
 		return "login";
 	}

@@ -1,0 +1,42 @@
+.borda{
+	border: solid 1px;
+	border-radius: 2px;
+}
+
+.campoTexto{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.login{
+	margin-top: 10%;
+}
+
+.botaoLogin{
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.classeRegular{
+	width: 80px;
+}
+
+.logo{
+	width: 100px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.quebraLinha{
+	clear: both;
+}
+
+#cabecalho{
+	background-color: #eeeddd;
+}
+
+.tituloPagina{
+	text-align: center;
+	margin-top: 5px;
+}
