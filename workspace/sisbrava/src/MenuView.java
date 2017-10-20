@@ -17,17 +17,17 @@ public class MenuView {
 
 	public void save() {
 		this.texto = "Sucess Save";
-        //addMessage("Success Save", "Data saved");
+        addMessage("Success Save", "Data saved");
     }
      
     public void update() {
     	this.texto = "Sucess Update";
-        //addMessage("Success Update", "Data updated");
+        addMessage("Success Update", "Data updated");
     }
      
     public void delete() {
     	this.texto = "Sucess Delete";
-        //addMessage("Success Delete", "Data deleted");
+        addMessage("Success Delete", "Data deleted");
     }
      
     public void addMessage(String summary, String detail) {

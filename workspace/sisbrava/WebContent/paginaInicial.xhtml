@@ -11,15 +11,21 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<link rel="stylesheet" type="text/css"
 		href="css/bootstrap/css/bootstrap.css" />
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/principal.css" />
 	<title>Inicio</title>
 </h:head>
 
-<h:body>
+<h:body class="color">
 	<h:form>
 		<div class="container-fluid">
+<<<<<<< HEAD
 			<div id="cabecalho" class="row">
 				<div class="col-md-12" style="border-bottom: solid 1px;">					
+=======
+			<div class="row">
+				<div class="col-md-12" style="border-bottom: solid 1px;">
+
+>>>>>>> 0d90ec7f03870217ea538884a53c6bd58e3813b6
 					<div class="col-md-2">
 						<h4><h:outputLabel value="Usuario - #{user.username}" class="quebraLinha" /></h4>
 						<h5>Cargo</h5>
@@ -42,283 +48,47 @@
 				<div class="col-md-12">
 
 					<div class="col-md-3" style="margin: 0px; padding: 0px;">
-						<h:form>
-							<p:growl id="messages" showDetail="false" />
-							<div class="tituloPagina">
-								<h3 style="margin-top: 0">Menu Principal</h3>
-							</div>
-							<p:menu toggleable="true" collapsed="true" closeable="false" style="width: 100%;">
-								<p:submenu label="Cronograma anual" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-								<p:submenu label="Progresso de ranking" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-								<p:submenu label="Diretoria" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-								<p:submenu label="Cargos" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-								<p:submenu label="Desbravadores" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-								<p:submenu label="Especialidades" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-								<p:submenu label="Classes Regulares" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-								<p:submenu label="Classes Avancadas" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-								<p:submenu label="Ranking" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-								<p:submenu label="Clube" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-								<p:submenu label="Coordenadoria" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-								<p:submenu label="Eventos" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-								<p:submenu label="Login" class="btn btn-default">
-									<p:menuitem value="Buscar" update="messages"
-										icon="ui-icon-search" />
-									<p:menuitem value="Cadastrar" update="messages"
-										icon="ui-icon-disk" />
-									<p:menuitem value="Alterar" update="messages"
-										icon="ui-icon-arrowrefresh-1-w" />
-									<p:menuitem value="Excluir" update="messages"
-										icon="ui-icon-close" />
-								</p:submenu>
-							</p:menu>
-						</h:form>
+					
+					<h:form>
+					
+						<div class="tituloPagina">
+							<h3>Menu Principal</h3>
+						</div>
+						
+						<p:menu>
+						
+							<p:submenu label="Home">
+								
+							</p:submenu>
+						
+							
+						
+						</p:menu>
+					
+					</h:form>
+						
+						<h:outputLabel><h4>MENU PRINCIPAL</h4></h:outputLabel>
+						
+						<h:commandButton value="Cronograma Anual" action="#{logic.cronogramaAnual}" class="btn btn-default btnMenu"/>
+						<h:commandButton value="Cargos" action="#{logic.cargos}" class="btn btn-default btnMenu"/>
+						<h:commandButton value="Diretoria" action="#{logic.diretoria}" class="btn btn-default btnMenu"/>
+						<h:commandButton value="Desbravadores" action="#{logic.desbravadores}" class="btn btn-default btnMenu"/>
+						<h:commandButton value="Especialidades" action="#{logic.especialidades}" class="btn btn-default btnMenu"/>
+						<h:commandButton value="Classes Regulares" action="#{logic.classesRegulares}" class="btn btn-default btnMenu"/>
+						<h:commandButton value="Classes Avancadas" action="#{logic.classesAvancadas}" class="btn btn-default btnMenu"/>
+						<h:commandButton value="Ranking" action="#{logic.ranking}" class="btn btn-default btnMenu"/>
+						<h:commandButton value="Progresso do Ranking" action="#{logic.progressoRanking}" class="btn btn-default btnMenu"/>
+						<h:commandButton value="Clube" action="#{logic.clube}" class="btn btn-default btnMenu"/>
+						<h:commandButton value="Coordenadoria" action="#{logic.coordenadoria}" class="btn btn-default btnMenu"/>
+						<h:commandButton value="Eventos" action="#{logic.eventos}" class="btn btn-default btnMenu"/>
+						<h:commandButton value="Login" action="#{logic.login}" class="btn btn-default btnMenu"/>
 					</div>
 
 					<div class="col-md-9">
-
-						<div class="tituloPagina">
-							<h3 style="margin-top: 0">DESBRAVADORES</h3>
-						</div>
-
-						<h:form>
-							<p:growl id="msgs" showDetail="true" />
-
-							<p:panel id="custom" header="Cadastrar"
-								style="margin-bottom:20px">
-								<h:outputText value="Preencha os campos abaixo para cadastrar um novo membro:" />
-								<h:panelGrid columns="1" cellpadding="5" style="width: 100%;">
-									
-									<div class="campoTexto">
-										<h:outputLabel value="Nome Completo:"/>
-										<h:inputText value="" class="form-control" />
-									</div>
-									
-									<div class="campoTexto">
-										<h:outputLabel value="Sexo:"/>
-										<input type="radio" value="masculino" /><span>masculino</span>
-										<input type="radio" value="feminino" /><span>feminino</span>
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Batizado:"/>
-										<input type="checkbox" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Data de nascimento:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Telefone:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>									
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Celular:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>									
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="E-mail:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>									
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Estado:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>									
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Cidade:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Cep:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Endereco + numero:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Bairro:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Certidao de nascimento:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="RG:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="CPF:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Estado civil:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Nome do Pai:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="E-mail do Pai:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Telefone do Pai:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Nome da Mae:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="E-mail da Mae:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									<div  class="campoTexto">
-										<h:outputLabel value="Telefone da Mae:"/>
-										<h:inputText value="" class="form-control campoTexto" />
-									</div>
-									
-									
-								</h:panelGrid>
-
-								<f:facet name="actions">
-									<h:commandLink
-										styleClass="ui-panel-titlebar-icon ui-corner-all ui-state-default">
-										<h:outputText styleClass="ui-icon ui-icon-help" />
-									</h:commandLink>
-								</f:facet>
-							</p:panel>
-
-						</h:form>
+						
+						<ui:insert name="header" >
+						  <ui:include src="#{logic.controle}" />
+						</ui:insert>
 
 					</div>
 
