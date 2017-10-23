@@ -9,131 +9,47 @@
 <body>
 	<ui:composition>
 
-		<div class="tituloPagina">
-			<h3 style="margin-top: 0">LOGIN</h3>
-		</div>
-
 		<h:form>
 			<p:growl id="msgs" showDetail="true" />
 
-			<p:panel id="custom" header="Cadastrar" style="margin-bottom:20px">
-				<h:outputText
-					value="Preencha os campos abaixo para cadastrar um novo membro:" />
-				<h:panelGrid columns="1" cellpadding="5" style="width: 100%;">
+			<p:panel id="custom" header="Login" style="margin-bottom:20px; font-size: 16px; margin-top: 10px;">
+				<h:outputText value="Utilize o campo abaixo para buscar um usuario:" />
+				<h:panelGrid columns="2" cellpadding="20" style="width: 100%;">
 
-					<div class="campoTexto">
-						<h:outputLabel value="Nome Completo:" />
-						<h:inputText value="" class="form-control" />
-					</div>
+					<h:inputText value="" class="form-control campoTexto" style="width: 95%;"/>
 
-					<div class="campoTexto">
-						<h:outputLabel value="Sexo:" />
-						<input type="radio" value="masculino" /><span>masculino</span> <input
-							type="radio" value="feminino" /><span>feminino</span>
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Batizado:" />
-						<input type="checkbox" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Data de nascimento:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Telefone:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Celular:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="E-mail:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Estado:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Cidade:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Cep:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Endereco + numero:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Bairro:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Certidao de nascimento:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="RG:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="CPF:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Estado civil:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Nome do Pai:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="E-mail do Pai:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Telefone do Pai:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Nome da Mae:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="E-mail da Mae:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
-					<div class="campoTexto">
-						<h:outputLabel value="Telefone da Mae:" />
-						<h:inputText value="" class="form-control campoTexto" />
-					</div>
-
+					<h:button value="Buscar" class="btn btn-default"></h:button>
+					
+					<p:commandButton value="Cadastrar" type="button" onclick="PF('dlg2').show();" class="btn btn-default" />
+					<p:dialog header="Cadastrar - Usuario" widgetVar="dlg2" modal="true">
+					    <h:outputText value="Usuario:" />
+					    <h:inputText class="form-control campoTexto" style="width: 400px;"></h:inputText>
+					    
+					    <h:outputText value="Senha:" />
+					    <h:inputText class="form-control campoTexto" style="width: 400px;"></h:inputText>
+					    
+					    <h:outputText value="Confirma senha:" />
+					    <h:inputText class="form-control campoTexto" style="width: 400px;"></h:inputText>
+					    
+					    <br/><br/>
+					    
+					    <h:button value="Salvar" class="btn btn-primary btnMenu"></h:button>
+					    <br/>
+					    <h:button value="Cancelar" class="btn btn-danger btnMenu" style="margin-top: 10px;"></h:button>
+					</p:dialog>
 
 				</h:panelGrid>
+				
+				<br/><br/>
+				
+				<p:dataTable var="car" value="">
+					<p:column headerText="ID">
+						<h:outputText value="0" />
+					</p:column>
+					<p:column headerText="Nome">
+						<h:outputText value="Wheslley" />
+					</p:column>
+				</p:dataTable>
 
 				<f:facet name="actions">
 					<h:commandLink

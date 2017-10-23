@@ -18,20 +18,31 @@
 <h:body class="color">
 	<h:form>
 		<div class="container-fluid">
-<<<<<<< HEAD
-			<div id="cabecalho" class="row">
-				<div class="col-md-12" style="border-bottom: solid 1px;">					
-=======
+
 			<div class="row">
 				<div class="col-md-12" style="border-bottom: solid 1px;">
 
->>>>>>> 0d90ec7f03870217ea538884a53c6bd58e3813b6
 					<div class="col-md-2">
-						<h4><h:outputLabel value="Usuario - #{user.username}" class="quebraLinha" /></h4>
-						<h5>Cargo</h5>
+					
+						<p:panelGrid columns="2" style="margin-top: 4px;">
+						    <f:facet name="header">
+						        
+						    </f:facet>
+						 
+						    <h:outputText value="Nome:" />
+						    <h:outputText value="Wheslley" />
+						 
+						    <h:outputText value="Cargo:" />
+						    <h:outputText value="Conselheiro" />
+						    
+						</p:panelGrid>
+					</div>
+					
+					<div class="col-md-4 col-md-offset-2" style="text-align: center;">
+						<h1>Sisbrava</h1>
 					</div>
 
-					<div class="col-md-2 col-md-offset-8" style="margin-top: 14px;">
+					<div class="col-md-2 col-md-offset-2" style="margin-top: 2%;">
 						<div class="col-md-4">
 							<a href="paginaInicial.xhtml" class="btn btn-default">Inicio</a>
 						</div>
@@ -45,52 +56,54 @@
 
 				</div>
 
+				<div class="col-md-12" style="margin: 0px; padding: 0px;">
+						<p:growl id="messages" />
+
+						<p:menubar>
+
+							<p:submenu label="Menu Principal" icon="ui-icon-gear">
+
+								<p:menuitem value="Cargos" actionListener="#{logic.cargos}" icon="ui-icon-disk" update="messages" ajax="false" />
+
+								<p:menuitem value="Desbravadores" actionListener="#{logic.desbravadores}" icon="ui-icon-disk" update="messages" ajax="false" />
+
+								<p:menuitem value="Diretoria" actionListener="#{logic.diretoria}" icon="ui-icon-disk" update="messages" ajax="false" />
+
+								<p:menuitem value="Classes Regulares" actionListener="#{logic.classesRegulares}" icon="ui-icon-disk" update="messages" ajax="false" />
+
+								<p:menuitem value="Classes Avancadas" actionListener="#{logic.classesAvancadas}" icon="ui-icon-disk" update="messages" ajax="false" />
+
+								<p:menuitem value="Especialidades" actionListener="#{logic.especialidades}" icon="ui-icon-disk" update="messages" ajax="false" />
+
+								<p:menuitem value="Clube" actionListener="#{logic.clube}" icon="ui-icon-disk" update="messages" ajax="false" />
+
+								<p:menuitem value="Coordenadoria" actionListener="#{logic.coordenadoria}" icon="ui-icon-disk" update="messages" ajax="false" />
+
+								<p:menuitem value="Eventos" actionListener="#{logic.eventos}" icon="ui-icon-disk" update="messages" ajax="false" />
+
+								<p:menuitem value="Cronograma Anual" actionListener="#{logic.cronogramaAnual}" icon="ui-icon-disk" update="messages" ajax="false" />
+								
+								<p:menuitem value="Ranking" actionListener="#{logic.ranking}" icon="ui-icon-disk" update="messages" ajax="false" />
+								
+								<p:menuitem value="Progresso-Ranking" actionListener="#{logic.progressoRanking}" icon="ui-icon-disk" update="messages" ajax="false" />
+
+								<p:menuitem value="Login" actionListener="#{logic.login}" icon="ui-icon-disk" update="messages" ajax="false" />
+
+							</p:submenu>
+							
+
+						</p:menubar>
+						
+						<f:facet name="options">
+							<p:commandButton type="button" value="Sair" icon="ui-icon-extlink" />
+						</f:facet>
+				</div>
+
 				<div class="col-md-12">
 
-					<div class="col-md-3" style="margin: 0px; padding: 0px;">
-					
-					<h:form>
-					
-						<div class="tituloPagina">
-							<h3>Menu Principal</h3>
-						</div>
-						
-						<p:menu>
-						
-							<p:submenu label="Home">
-								
-							</p:submenu>
-						
-							
-						
-						</p:menu>
-					
-					</h:form>
-						
-						<h:outputLabel><h4>MENU PRINCIPAL</h4></h:outputLabel>
-						
-						<h:commandButton value="Cronograma Anual" action="#{logic.cronogramaAnual}" class="btn btn-default btnMenu"/>
-						<h:commandButton value="Cargos" action="#{logic.cargos}" class="btn btn-default btnMenu"/>
-						<h:commandButton value="Diretoria" action="#{logic.diretoria}" class="btn btn-default btnMenu"/>
-						<h:commandButton value="Desbravadores" action="#{logic.desbravadores}" class="btn btn-default btnMenu"/>
-						<h:commandButton value="Especialidades" action="#{logic.especialidades}" class="btn btn-default btnMenu"/>
-						<h:commandButton value="Classes Regulares" action="#{logic.classesRegulares}" class="btn btn-default btnMenu"/>
-						<h:commandButton value="Classes Avancadas" action="#{logic.classesAvancadas}" class="btn btn-default btnMenu"/>
-						<h:commandButton value="Ranking" action="#{logic.ranking}" class="btn btn-default btnMenu"/>
-						<h:commandButton value="Progresso do Ranking" action="#{logic.progressoRanking}" class="btn btn-default btnMenu"/>
-						<h:commandButton value="Clube" action="#{logic.clube}" class="btn btn-default btnMenu"/>
-						<h:commandButton value="Coordenadoria" action="#{logic.coordenadoria}" class="btn btn-default btnMenu"/>
-						<h:commandButton value="Eventos" action="#{logic.eventos}" class="btn btn-default btnMenu"/>
-						<h:commandButton value="Login" action="#{logic.login}" class="btn btn-default btnMenu"/>
-					</div>
-
-					<div class="col-md-9">
-						
-						<ui:insert name="header" >
-						  <ui:include src="#{logic.controle}" />
-						</ui:insert>
-
-					</div>
+				<ui:insert name="header">
+					<ui:include src="#{logic.controle}" />
+				</ui:insert>
 
 				</div>
 			</div>
