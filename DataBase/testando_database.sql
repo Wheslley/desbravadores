@@ -8,3 +8,6 @@ insert into teste
     select 'Whislley' as nome from dual;
 select * from teste;
 drop table teste;
+
+
+

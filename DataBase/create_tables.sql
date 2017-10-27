@@ -15,15 +15,20 @@ create table pessoa(
     primary key (id)
 );
 
-create table usuarios(
+create table usuario(
+	id integer not null,
 	usuario varchar(100) not null,
     senha varchar(50) not null,
     id_pessoa int not null,
     id_permissao int not null,
-    primary key (usuario),
+    primary key (id),
     foreign key (id_pessoa) references pessoa (id),
     foreign key (id_permissao) references permissoes (id)
 );
+
+
+--
+
 
 create table classes(
 	id int not null auto_increment,

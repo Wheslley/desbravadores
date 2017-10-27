@@ -18,7 +18,9 @@ insert into permissoes (descricao) values ('COORDENADOR');
  /*select * from pessoa;*/
 
 /*usuarios*/
-insert into usuarios values ('wheslleyny@gmail.com','senha123', 1, 1);
+insert into usuario values (1, 'wheslleyny@gmail.com','senha123', 1, 1);
+
+
 
 /*select * from usuarios;
 
@@ -27,6 +29,10 @@ select u.usuario as usuario
   from usuarios u
      , permissoes p
  where u.id_permissao = p.id;*/
+
+
+--
+
 
 insert into classes (nome, idade) values ('AMIGO',10);
 insert into classes (nome, idade) values ('AMIGO DA NATUREZA',10);
