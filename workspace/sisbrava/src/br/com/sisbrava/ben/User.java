@@ -1,4 +1,4 @@
-package br.com.sisbrava.bens;
+package br.com.sisbrava.ben;
 
 import javax.faces.bean.ManagedBean;
 

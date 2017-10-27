@@ -3,7 +3,7 @@ package br.com.sisbrava.controller;
 import javax.faces.bean.ManagedBean;
 
 @ManagedBean(name = "logic")
-public class ControleMenu {
+public class ControllerMenu {
 	
 	private String controleMenu = "";
 
