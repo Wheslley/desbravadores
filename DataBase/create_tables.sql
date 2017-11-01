@@ -1,118 +1,113 @@
+create database desbravadores;
 use desbravadores;
 
 create table permissoes(
-	id int not null auto_increment,
+	permissoes_id int not null auto_increment,
     descricao varchar(100) not null,
-    primary key (id)
+    primary key (permissoes_id)
 );
 
 create table pessoa(
-	id int not null auto_increment,
+	pessoa_id int not null auto_increment,
     nome varchar(200) not null,
     idade int not null,
     rg varchar(9),
     cpf varchar(11),
-    primary key (id)
+    primary key (pessoa_id)
 );
 
 create table usuario(
-	id integer not null,
+	usuario_id integer not null auto_increment,
 	usuario varchar(100) not null,
     senha varchar(50) not null,
-    id_pessoa int not null,
-    id_permissao int not null,
-    primary key (id),
-    foreign key (id_pessoa) references pessoa (id),
-    foreign key (id_permissao) references permissoes (id)
+    pessoa_id int not null,
+    permissoes_id int not null,
+    primary key (usuario_id),
+    foreign key (pessoa_id) references pessoa (pessoa_id),
+    foreign key (permissoes_id) references permissoes (permissoes_id)
 );
-
-
---
-
 
 create table classes(
-	id int not null auto_increment,
-    nome varchar(100) not null,
-    idade int not null,
-    primary key (id)
-);
-
-create table pessoa_possui_classes(
-	id int not null auto_increment,
-    id_pessoa int not null,
-    id_classe int not null,
-    primary key (id),
-    foreign key (id_pessoa) references pessoa (id),
-    foreign key (id_classe) references classes (id)
+	classe_id int not null auto_increment,
+    descricao varchar(100) not null,
+    idade_permitida int not null,
+    primary key (classe_id)
 );
 
 create table especialidades(
-	id int not null auto_increment,
-    nome varchar(100) not null,
+	especialidade_id int not null auto_increment,
+    descricao varchar(100) not null,
     dificuldade varchar(50) not null,
-    primary key (id)
-);
-
-create table pessoa_possui_especialidade(
-	id int not null auto_increment,
-    id_pessoa int not null,
-    id_especialidade int not null,
-    data_especialidade date,
-    primary key (id),
-    foreign key (id_pessoa) references pessoa (id),
-    foreign key (id_especialidade) references especialidades (id)
-);
-
-create table clube(
-	id int not null auto_increment,
-    nome varchar(100) not null,
-    data_fundacao date not null,
-    primary key (id)
-);
-
-ALTER TABLE clube ADD regiao int;
-ALTER TABLE clube ADD id_cep int;
-ALTER TABLE clube ADD FOREIGN KEY (id_cep) REFERENCES cep (id);
-
-create table clube_possui_pessoa(
-	id int not null auto_increment,
-    id_clube int not null,
-    id_pessoa int not null,
-    primary key (id),
-    foreign key (id_clube) references clube (id),
-    foreign key (id_pessoa) references pessoa (id)    
+    primary key (especialidade_id)
 );
 
 create table cep(
-	id int not null auto_increment,
+	cep_id int not null auto_increment,
 	cidade varchar(100) not null,
     estado varchar(80) not null,
     pais varchar(50) not null,
-    primary key (id)
+    primary key (cep_id)
 );
 
-create table pessoa_possui_cep(
-	id int not null auto_increment,
-    id_pessoa int not null,
-    id_cep int not null,
-    primary key (id),
-    foreign key (id_pessoa) references pessoa (id),
-    foreign key (id_cep) references cep (id)
+create table cargo(
+	cargo_id int not null auto_increment,
+    descricao varchar(100) not null,
+    primary key (cargo_id)
 );
 
-create table tipo_cargo(
-	id int not null auto_increment,
-    nome varchar(100) not null,
-    primary key (id)
+create table clube(
+	clube_id int not null auto_increment,
+    descricao varchar(100) not null,
+    regiao int not null,
+    cep_id int not null,
+    primary key (clube_id),
+    foreign key (cep_id) references cep (cep_id)
 );
 
-create table tcargo_cep_pessoa(
-	id int not null auto_increment,
-    id_cargo int not null,
-    id_cep int not null,
-    id_pessoa int not null,
-    primary key(id),
-    foreign key (id_cargo) references tipo_cargo (id),
-    foreign key (id_cep) references cep (id),
-    foreign key (id_pessoa) references pessoa (id)    
+create table pessoaPossuiClasse(
+	ppclasse_id int not null auto_increment,
+    pessoa_id int not null,
+    classe_id int not null,
+    primary key (ppclasse_id),
+    foreign key (pessoa_id) references pessoa (pessoa_id),
+    foreign key (classe_id) references classes (classe_id)
 );
+
+create table pessoaPossuiEspecialidade(
+	ppespecialidade_id int not null auto_increment,
+    pessoa_id int not null,
+    especialidade_id int not null,
+    primary key (ppespecialidade_id),
+    foreign key (pessoa_id) references pessoa (pessoa_id),
+    foreign key (especialidade_id) references especialidades (especialidade_id)
+);
+
+create table clubePossuiPessoa(
+	cppessoa_id int not null auto_increment,
+    clube_id int not null,
+    pessoa_id int not null,
+    primary key (cppessoa_id),
+    foreign key (clube_id) references clube (clube_id),
+    foreign key (pessoa_id) references pessoa (pessoa_id)    
+);
+
+create table pessoaPossuiCep(
+	ppcep_id int not null auto_increment,
+    pessoa_id int not null,
+    cep_id int not null,
+    primary key (ppcep_id),
+    foreign key (pessoa_id) references pessoa (pessoa_id),
+    foreign key (cep_id) references cep (cep_id)
+);
+
+create table cargoCepPessoa(
+	ccpessoa_id int not null auto_increment,
+    cargo_id int not null,
+    cep_id int not null,
+    pessoa_id int not null,
+    primary key(ccpessoa_id),
+    foreign key (cargo_id) references cargo (cargo_id),
+    foreign key (cep_id) references cep (cep_id),
+    foreign key (pessoa_id) references pessoa (pessoa_id)    
+);
+

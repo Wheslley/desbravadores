@@ -14,13 +14,14 @@ insert into permissoes (descricao) values ('COORDENADOR');
 
 /*pessoa*/
  insert into pessoa (nome, idade, rg, cpf) values ('Wheslley Nycolas da Silva',25,'479504593','41114890871');
- 
- /*select * from pessoa;*/
+ insert into pessoa (nome, idade, rg, cpf) values ('Whislley Willian da Silva',24,'','');
+ select * from pessoa;
 
 /*usuarios*/
-insert into usuario values (1, 'wheslleyny@gmail.com','senha123', 1, 1);
-
-
+insert into usuario values (1, 1, 1, 'senha123', 'wheslley');
+select * from usuario;
+commit;
+drop table usuario;
 
 /*select * from usuarios;
 
@@ -34,21 +35,21 @@ select u.usuario as usuario
 --
 
 
-insert into classes (nome, idade) values ('AMIGO',10);
-insert into classes (nome, idade) values ('AMIGO DA NATUREZA',10);
-insert into classes (nome, idade) values ('COMPANHEIRO',11);
-insert into classes (nome, idade) values ('COMPANHEIRO DE EXCURSIONISMO',11);
-insert into classes (nome, idade) values ('PESQUISADOR',12);
-insert into classes (nome, idade) values ('PESQUISADOR DE CAMPOS E BOSQUES',12);
-insert into classes (nome, idade) values ('PIONEIRO',13);
-insert into classes (nome, idade) values ('PIONEIRO DE NOVAS FRONTEIRAS',13);
-insert into classes (nome, idade) values ('EXCURCIONISTA',14);
-insert into classes (nome, idade) values ('EXCURCIONISTA DA MATA',14);
-insert into classes (nome, idade) values ('GUIA',15);
-insert into classes (nome, idade) values ('GUIA DE EXPLORAÇÃO',15);
-insert into classes (nome, idade) values ('LÍDER',16);
-insert into classes (nome, idade) values ('LÍDER MASTER',18);
-insert into classes (nome, idade) values ('LÍDER MASTER AVANÇADO',20);
+insert into classes (descricao, idade_permitida) values ('AMIGO',10);
+insert into classes (descricao, idade_permitida) values ('AMIGO DA NATUREZA',10);
+insert into classes (descricao, idade_permitida) values ('COMPANHEIRO',11);
+insert into classes (descricao, idade_permitida) values ('COMPANHEIRO DE EXCURSIONISMO',11);
+insert into classes (descricao, idade_permitida) values ('PESQUISADOR',12);
+insert into classes (descricao, idade_permitida) values ('PESQUISADOR DE CAMPOS E BOSQUES',12);
+insert into classes (descricao, idade_permitida) values ('PIONEIRO',13);
+insert into classes (descricao, idade_permitida) values ('PIONEIRO DE NOVAS FRONTEIRAS',13);
+insert into classes (descricao, idade_permitida) values ('EXCURCIONISTA',14);
+insert into classes (descricao, idade_permitida) values ('EXCURCIONISTA DA MATA',14);
+insert into classes (descricao, idade_permitida) values ('GUIA',15);
+insert into classes (descricao, idade_permitida) values ('GUIA DE EXPLORAÇÃO',15);
+insert into classes (descricao, idade_permitida) values ('LÍDER',16);
+insert into classes (descricao, idade_permitida) values ('LÍDER MASTER',18);
+insert into classes (descricao, idade_permitida) values ('LÍDER MASTER AVANÇADO',20);
 
 /*select * from classes;*/
 

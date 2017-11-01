@@ -1,3 +1,95 @@
+*{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.corpoLogin{
+	background-image: url("img/fundo.png");
+}
+
+.cabecalho{
+	background-color: #5F151B;
+	height: 140px;
+}
+
+.corpoTitulo{
+	text-align: center;
+}
+
+.tituloCabecalho{
+	color: white;
+	font-family: serif;
+	font-size: 45px;
+	padding: 0px;
+	margin-top: 45px;
+}
+
+.fotoCabecalho{
+	height: 120px;
+	margin-top: 10px;
+}
+
+.dadosUsuario{
+	height: 40px;
+	margin-top: 40px;
+	width: 100%;	
+}
+
+.novoMenu{
+	height: 250px; 
+	width: 24%; 
+	margin-left: 0.5%; 
+	margin-right: 0.5%; 
+	margin-top: 5px;
+}
+
+.caixaMenu{
+	width: 90%;
+	margin: auto;
+}
+
+.btnNovoMenu{
+	height: 250px;
+	background-color: white; 
+	box-shadow: 1px 2px 8px 1px #888888;
+}
+
+.subNovoMenu{
+	width: 150px; 
+	height: 150px; 
+	border: solid 1px;
+	border-radius: 50%; 
+	margin: auto; 
+	margin-top: 8%;
+	background-image: url("img/b_amigo.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.tituloNovoMenu{
+	margin-left: 5%;
+	width: 50%;
+	font-size: 16px;
+}
+
+.textoSubNovoMenu{
+	font-size: 24px; 
+	color: #5F151B;
+}
+
+.cabecalhoNovoMenu{
+	height: 18%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.corpoNovoMenu{
+	height: 52%;
+}
+
+.detalhesNovoMenu{
+	height: 30%;
+}
+
 .borda{
 	border: solid 1px;
 	border-radius: 2px;
@@ -10,6 +102,8 @@
 .campoTexto{
 	margin-top: 5px;
 	margin-bottom: 5px;
+	display: inline;
+	width: 24%;
 }
 
 .login{

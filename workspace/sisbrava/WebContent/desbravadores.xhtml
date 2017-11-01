@@ -13,13 +13,12 @@
 			<p:growl id="msgs" showDetail="true" />
 
 			<p:panel id="custom" header="Desbravadores" style="margin-bottom:20px; font-size: 16px; margin-top: 10px;">
-				<h:outputText
-					value="Preencha os campos abaixo para cadastrar um novo desbravador:" />
+				<h:outputText value="Utilize o campo abaixo para buscar um desbravador:" />
 				<h:panelGrid columns="2" cellpadding="20" style="width: 100%;">
 
 					<h:inputText value="" class="form-control campoTexto" style="width: 95%;"/>
 
-					<h:button value="Buscar" class="btn btn-default"></h:button>
+					<p:commandButton value="Buscar" type="button" onclick="" class="btn btn-default" />
 					
 					<p:commandButton value="Cadastrar" type="button" onclick="PF('dlg2').show();" class="btn btn-default" />
 					<p:dialog header="Cadastrar - Desbravador" widgetVar="dlg2" modal="true">
@@ -56,7 +55,7 @@
 				
 				<br/><br/>
 
-				<p:dataTable var="car" value="">
+				<p:dataTable var="car" value="" style="width: 80%; margin: auto;">
 					<p:column headerText="ID">
 						<h:outputText value="0" />
 					</p:column>
