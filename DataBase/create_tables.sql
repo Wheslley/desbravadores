@@ -27,6 +27,55 @@ create table usuario(
     foreign key (permissoes_id) references permissoes (permissoes_id)
 );
 
+create table notificacao(
+	notificacao_id integer not null auto_increment,
+    descricao varchar(4000) not null,
+    primary key (notificacao_id)
+);
+
+create table requisitos(
+	requisito_id integer not null auto_increment,
+	descricao varchar(4000) not null,
+    primary key (requisito_id)
+);
+
+drop table tipoEvento;
+create table tipoEvento(
+	tevento integer not null auto_increment,
+    descricao varchar(100),
+    primary key (tevento)
+);
+
+create table evento(
+	evento_id integer not null auto_increment,
+	descricao varchar(4000) not null,
+    taxa real not null,
+    tevento integer not null,
+    primary key (evento_id),
+    foreign key (tevento) references tipoEvento (tevento)
+);
+
+alter table evento add column tevento integer not null;
+alter table evento add constraint foreign key (tevento) references tipoEvento (tevento);
+
+create table eventoRequisitos(
+	erequisito_id integer not null auto_increment,
+    evento_id integer not null,
+    requisito_id integer not null,
+    primary key (erequisito_id),
+    foreign key (evento_id) references evento (evento_id),
+    foreign key (requisito_id) references requisitos (requisito_id)
+);
+
+create table eventoNotificacaoUsuario(
+	enusuario_id integer not null auto_increment,
+    evento_id integer not null,
+    usuario_id integer not null,
+    primary key (enusuario_id),
+    foreign key (evento_id) references evento (evento_id),
+    foreign key (usuario_id) references usuario (usuario_id)
+);
+
 create table classes(
 	classe_id int not null auto_increment,
     descricao varchar(100) not null,
@@ -46,6 +95,7 @@ create table cep(
 	cidade varchar(100) not null,
     estado varchar(80) not null,
     pais varchar(50) not null,
+    regiao integer not null,
     primary key (cep_id)
 );
 
@@ -111,3 +161,29 @@ create table cargoCepPessoa(
     foreign key (pessoa_id) references pessoa (pessoa_id)    
 );
 
+create table clubePossuiCep(
+	cpcep_id int not null auto_increment,
+    clube_id int not null,
+    cep_id int not null,
+    primary key (cpcep_id),
+    foreign key (clube_id) references clube (clube_id),
+    foreign key (cep_id) references cep (cep_id)    
+);
+
+create table eventoPossuiCep(
+	epcep_id integer not null auto_increment,
+    evento_id integer not null,
+    cep_id integer not null,
+    primary key (epcep_id),
+    foreign key (evento_id) references evento (evento_id),
+    foreign key (cep_id) references cep (cep_id)
+);
+
+create table eventoPossuiRequisitos(
+	eprequisito_id integer not null auto_increment,
+    evento_id integer not null,
+    requisito_id integer not null,
+    primary key (eprequisito_id),
+    foreign key (evento_id) references evento (evento_id),
+    foreign key (requisito_id) references requisitos (requisito_id)
+);
